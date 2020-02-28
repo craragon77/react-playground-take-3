@@ -1,11 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css';
 
-function App() {
-  return (
-    <main className='App'>
-      {/* content goes here */}
-    </main>
-  );
-}
-
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'));
