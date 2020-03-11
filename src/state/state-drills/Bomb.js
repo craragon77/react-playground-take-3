@@ -12,21 +12,21 @@ class Bomb extends React.Component {
         }
     }
     componentDidMount(){
-        this.interval = setInterval(() => {
-            this.setState({
-                dateTime: new Date()
-            })
-            console.log(this.dateTime)
-            if (this.dateTime % 2 === 0) {
-                console.log(this.state.tick)
-            } else if (this.dateTime % 2 !== 0) {
-                console.log(this.state.tock)
-            } else if (this.dateTime >= 8) {
-                console.log(this.state.explode)
-            }
-        }, 1000)
+        this.setState({
+            dateTime: new Date()
+        }, () => {
+       console.log(this.dateTime)
+        if (this.dateTime % 2 === 0) {
+            console.log(this.state.tick)
+        } else if (this.dateTime % 2 !== 0) {
+            console.log(this.state.tock)
+        } else if (this.dateTime >= 8) {
+            console.log(this.state.explode)
+        }
+       })
     }
-    conponentWillUnmount(){
+
+    conponentWillUnmount() {
         clearInterval(this.interval)
     }
     render(){
@@ -35,7 +35,7 @@ class Bomb extends React.Component {
                 <p>{this.state.dateTime}</p>
             </div>
         )
-    }
+}
 }
 
 export default Bomb
