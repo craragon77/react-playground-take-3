@@ -7,7 +7,7 @@ function App() {
     <main className='App'>
       {/* content goes here */}
       {/*<HelloWorld who={'World'}/>*/}
-      
+      <Bomb />
     </main>
   );
 }
