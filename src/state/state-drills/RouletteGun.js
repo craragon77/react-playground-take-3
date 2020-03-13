@@ -8,13 +8,20 @@ class RouletteGun extends React.Component {
             spinningTheChamber: false
         }
     }
-    componentDidMount(){
-
+    chamberIsSpinning = () => {
+        this.setState({
+            spinningTheChamber: true
+        })
     }
+
     render() {
-        return(
-        <p>{this.props.BulletInChamber}</p>
-        <button>Pull the trigger</button>
+        return (
+            <div>
+                <p>{this.props.BulletInChamber}</p>
+                <button onClick={this.chamberIsSpinning}>Pull the trigger</button>
+            </div>
+
+        
         )
     }
 }

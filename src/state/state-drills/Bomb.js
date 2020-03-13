@@ -15,12 +15,12 @@ class Bomb extends React.Component {
         this.setState({
             dateTime: new Date()
         }, () => {
-       console.log(this.dateTime)
+       console.log(this.state.dateTime)
         if (this.dateTime % 2 === 0) {
             console.log(this.state.tick)
-        } else if (this.dateTime % 2 !== 0) {
+        } else if (this.state.dateTime % 2 !== 0) {
             console.log(this.state.tock)
-        } else if (this.dateTime >= 8) {
+        } else if (this.state.dateTime >= 8) {
             console.log(this.state.explode)
         }
        })
@@ -32,7 +32,7 @@ class Bomb extends React.Component {
     render(){
         return(
             <div>
-                <p>{this.state.dateTime}</p>
+                <p>idk what i'm doing</p>
             </div>
         )
 }
