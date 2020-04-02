@@ -1,13 +1,16 @@
 import React from 'react'
 
 class Accordion extends React.Component {
-    static defaultProps = {thingy: []}
+    static defaultProps = {tester: []}
+    handleClick = () => {
+        console.log(this.props.tester)
+    }
     render(){
-        const listItems = this.props.thingy.forEach((thingy, index) => {
+        const listItems = this.props.tester.map((tester, index) => {
             return (
             <li key={index}>
-                <p>{thingy.section}</p>
-                <button>{thingy.title}</button>
+                <p>{tester.section}</p>
+                <button onClick={() => this.handleButtonClick()}>{tester.title}</button>
             </li>)
         })
         return(
